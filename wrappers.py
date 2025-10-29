@@ -12,6 +12,6 @@ def invalid_token_handling(func):
     def wrapper(self, *args, **kwargs):
         try:
             func(self, *args, **kwargs)
-        except (InvalidToken, ValueError):
+        except (InvalidToken, ValueError, SyntaxError):
             print(f"{BOLD}{FG_RED}==> Corrupted Key File or Target!")  
     return wrapper
