@@ -22,7 +22,7 @@ class Crypto():
         encrypted_file_path = file_path + ".enc"
         with open(encrypted_file_path, "wb") as encrypted_file:
             encrypted_file.write(encrypted_content)
-
+            
     @invalid_token_handling
     def decrypt(self, key_file_path, encrypted_file_path):
         with open(key_file_path, "rb") as key_file:
@@ -34,4 +34,5 @@ class Crypto():
         decrypted_file_path = encrypted_file_path.replace(".enc", "")
         with open(decrypted_file_path, "wb") as decrypted_file:
             decrypted_file.write(decrypted_content)
+
 
