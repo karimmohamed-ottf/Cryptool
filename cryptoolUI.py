@@ -48,6 +48,7 @@ class CryptoUI():
                     else:
                         self.crypto.decrypt(encryption_key_file, operation_file)
 
+                    print(f"{BOLD}{BG_BLUE}==> Encrypting {operation_file} ...")
                     print(f"{BOLD}{FG_GREEN}==> Successfully {operation_name}ed: {operation_file}")
                     self.cryptoutils.pause()
                     break
