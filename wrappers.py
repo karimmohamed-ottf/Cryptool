@@ -1,3 +1,5 @@
+from colors import BOLD, FG_RED
+
 def class_error_handling(func):
     def wrapper(self, *args, **kwargs):
         try:
